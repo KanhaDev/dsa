@@ -5,10 +5,11 @@ public class CheckPrime {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		int num = 1029;
+		int num = 11;
 		System.out.println(isPrime(num));
 		System.out.println(isPrime1(num));
 		System.out.println(isPrime2(num));
+		System.out.println(isPrime3(num));
 	}
 	public static boolean isPrime(int num) {
 		if(num==1)return false;
@@ -39,6 +40,23 @@ public class CheckPrime {
 				return false;
 		
 		return true;
+	}
+	
+	//Found another efficient way to check Prime
+	public static boolean isPrime3(int num) {
+		int count = 0;
+		for(int i=1;i*i<=num;i++)
+		{
+			if(num % i == 0)
+			{
+				count++;
+				if((num/i) != i)
+					count++;
+			}
+		}
+		if(count == 2)
+				return true;
+		return false;
 	}
 
 }

@@ -4,7 +4,7 @@ public class GCD {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int a =12,b=28;
+		int a =10,b=15;
 		System.out.println(gcd(a,b));
 		System.out.println(gcdEuclid(a,b));
 		System.out.println(gcdOptimised(a,b));
